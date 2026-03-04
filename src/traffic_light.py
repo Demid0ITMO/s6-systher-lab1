@@ -6,7 +6,7 @@ class TrafficLight:
   __X3 = "Yellow" 
   __X4 = "Flash Yellow"
   
-  # In signals
+  # In events
   __U = [
     "Timeout R",
     "Timeout RY",
@@ -65,7 +65,7 @@ class TrafficLight:
     else:
       print("! was ignored")
 
-  # Public methods that give In signals
+  # Public methods that execute In events
   def timer_red(self):
     self.__apply_event(0)
 
@@ -86,4 +86,4 @@ class TrafficLight:
 
   def show_stats(self):
     print(f"Current state: {self.__current_x}\n"
-    f"Flags: R={int(self.__Y0)}, Y={int(self.__Y1)}, G={int(self.__Y2)}, FY={int(self.__Y3)}")
+    f"Signals: R={int(self.__Y0)}, Y={int(self.__Y1)}, G={int(self.__Y2)}, FY={int(self.__Y3)}")
